@@ -23,8 +23,7 @@ public class Atividade2CollectionList {
 			System.out.printf("\nO número " + num + " não foi encontrado na lista.");
 		}else {
 			System.out.printf("\nO valor " + num + " está na posição " + lista.indexOf(num) + " da lista.");
-		}
-		
+		}		
 
 	}
 

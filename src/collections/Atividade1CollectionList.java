@@ -23,6 +23,7 @@ public class Atividade1CollectionList {
 			Collections.sort(lista);
 			System.out.println("\nOrdenar cores: " + lista);
 		
+			leia.close();
 	}
-
+	
 }
