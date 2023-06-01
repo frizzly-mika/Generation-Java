@@ -1,11 +1,19 @@
 package lacosCondicionais;
 
+import java.text.Normalizer;
 import java.util.Scanner;
 
+
 public class atividade4 {
+	
+	public static String removerAcentos(String texto) {
+		return Normalizer.normalize(texto, Normalizer.Form.NFD)
+				.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+	}
 
 	public static void main(String[] args) {
-		String animal, aniClas1, aniClas1A,
+		
+		String animal, aniClas1 = "", aniClas1A,
 					   aniClas01 = "", aniClas01A,
 					   aniClas2, aniClas2A,
 					   aniClas02 = "", aniClas02A,
@@ -20,8 +28,9 @@ public class atividade4 {
 		invert = "Invertebrado", 
 							   invertClas2 = "Anelídeo", invertClas2A = "Hematófago", invertClas2Aa = "Sanguessuga", 
 							  						     invertClas2B = "Onívoro", invertClas2Bb = "Minhoca";
- 					 
-		Scanner leia = new Scanner(System.in);
+		String diet = removerAcentos(aniClas1.toLowerCase());			 
+		
+		Scanner leia = new Scanner(System.in,"CP850");
 		
 		System.out.println("Descubra qual é o animal");
 		System.out.println("\n'Vertebrado' ou 'Invertebrado'? Digite para saber:");
